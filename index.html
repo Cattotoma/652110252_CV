@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - iPortfolio Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <style>
+    body, h1, h2, h3, h4, h5, h6, p, span, a, li {
+      font-family: Tahoma, sans-serif;
+    }
+
+    .education-item {
+      background-color: #f8f9fa;
+      border-left: 4px solid #149ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .education-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .education-item h4 {
+      color: #173b6c;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .education-item .date-range {
+      background-color: #149ddd;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.9em;
+    }
+
+    .education-item ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .education-item li {
+      margin-bottom: 5px;
+    }
+
+    /* เพิ่มสไตล์นี้ในส่วน <style> ที่ */
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .portfolio-item img {
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      color: white;
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
+
+    .portfolio-item:hover .portfolio-info {
+      opacity: 1;
+    }
+
+    .portfolio-info h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .portfolio-info p {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .portfolio-info .preview-link,
+    .portfolio-info .details-link {
+      color: white;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    /* เพิ่มสไตล์นี้ในส่วน <style> ที่มอยู่แล้ว */
+    .portfolio-item video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* เพิ่มสไตล์นี้ในส่วน <style> ที่มอยู่แล้ว */
+    .portfolio-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    .portfolio-wrap video {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-wrap:hover video {
+      transform: scale(1.1);
+    }
+
+    .portfolio-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      color: white;
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
+
+    .portfolio-wrap:hover .portfolio-info {
+      opacity: 1;
+    }
+
+    .portfolio-info h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .portfolio-info p {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .section h3 {
+      font-size: 24px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    /* เพิ่มสไตล์นี้ในส่วน <style> ที่มอยู่แล้ว */
+    .portfolio-container {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .portfolio-item {
+      padding: 0;
+    }
+
+    .portfolio-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-wrap video {
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-wrap:hover video {
+      transform: scale(1.1);
+    }
+
+    .portfolio-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      color: white;
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
+
+    .portfolio-wrap:hover .portfolio-info {
+      opacity: 1;
+    }
+
+    .portfolio-info h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .portfolio-info p {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    /* เพิ่มสไตล์นี้ในส่วน <style> ที่มีอยู่แล้ว */
+    #portfolio h3 {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    #portfolio h3::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #ffffff;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* เพิ่มสไตล์นี้ในส่วน <style> ที่มีอยู่แล้ว */
+    .skill-item {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-item h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .progress {
+      height: 10px;
+      border-radius: 5px;
+      background-color: #e9ecef;
+    }
+
+    .progress-bar {
+      background-color: #149ddd;
+      border-radius: 5px;
+    }
+
+    .progress-bar span {
+      position: absolute;
+      right: 0;
+      top: -25px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #149ddd;
+    }
+
+    /* เพิ่มสไตล์นี้ต่อจากสไตล์ที่มีอยู่เดิม */
+    .animated-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      background: linear-gradient(45deg, #000000, #1a1a1a, #2c2c2c);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .animated-background::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle, transparent 20%, #000000 80%);
+      opacity: 0.7;
+    }
+
+    #skills .container {
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    /* เพิ่มสไตล์นี้ต่อจากสไตล์ที่มีอยู่เดิม */
+    .player-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* เพิ่ม CSS นี้เพื่อลบเส้นขอบทั้งหมด */
+    body, .header, .main, section, .container, .row, [class*="col-"] {
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    /* ลบเส้นขอบของ header */
+    .header {
+      border-right: none !important;
+    }
+
+    /* ลบเส้นขอบของ sections */
+    section, .section {
+      border-top: none !important;
+      border-bottom: none !important;
+    }
+
+    #imageModal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #fullSizeImage {
+      max-width: 90%;
+      max-height: 90vh;
+      object-fit: contain;
+      border: 2px solid white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    /* เพิ่ม CSS น��้เพื่อลบเส้นขอบที่ไม่ต้องการ */
+    *:focus {
+      outline: none !important;
+    }
+
+    a:focus, button:focus, input:focus, textarea:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    /* เพิ่ม CSS นี้เพื่อลบเส้นขอบทั้งหมด */
+    body, .header, .main, section, .container, .row, [class*="col-"] {
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    /* ลบเส้นขอบของ header */
+    .header {
+      border-right: none !important;
+    }
+
+    /* ลบเส้นขอบของ sections */
+    section, .section {
+      border-top: none !important;
+      border-bottom: none !important;
+    }
+
+    #categories-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .category-section {
+      flex: 0 0 100%;
+      width: 100%;
+      scroll-snap-align: start;
+    }
+
+    /* ซ่อน scrollbar ต่ยังคงฟังก์ชันการเลื่อน */
+    #categories-container::-webkit-scrollbar {
+      display: none;
+    }
+    
+    #categories-container {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+    /* ลบ CSS ที่เกี่ยวข้องกับ modal ออก */
+    #imageModal, .modal-content, .close {
+      display: none;
+    }
+
+    /* เพิ่มสไตล์นี้ในส่วน <style> ที่มีอยู่แล้ว */
+    .category-btn {
+      background-color: transparent;
+      color: #ffffff;
+      border: 2px solid #808080; /* สีเทา */
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 5px;
+    }
+
+    .category-btn:hover, .category-btn.active {
+      background-color: transparent;
+      color: #ffffff;
+      border-color: #ffffff; /* เปลี่ยนสีขอบเป็นสีขาวเมื่อ hover หรือ active */
+    }
+
+    .category-section {
+      display: none;
+    }
+
+    .category-section.active {
+      display: block;
+    }
+
+    /* เพิ่มสไตล์นี้ต่อจากสไตล์ที่มีอยู่เดิม */
+    .horizontal-view .row {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 20px; /* เพิ่ม padding ด้านล่างเพื่อห้มีพื้นที่สำหรับ scrollbar */
+    }
+    
+    .horizontal-view .col-md-6 {
+      flex: 0 0 auto;
+      width: 300px; /* กำหนดความกว้างคงที่สำหรับแต่ละคอลัมน์ */
+      max-width: none;
+      margin-right: 20px; /* เพิ่มระยะห่างระหว่างคอลัมน์ */
+    }
+    
+    .horizontal-view .col-md-6:last-child {
+      margin-right: 0; /* ลบ margin ขวาของลัมน์ุท้าย */
+    }
+
+    /* ซ่อน scrollbar แต่ยังคงฟังกัการเลื่อน */
+    .horizontal-view .row::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .horizontal-view .row {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2c3e50;
+      --background-color: #f4f4f4;
+      --text-color: #333;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    .category-btn:hover, .social-links a:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .player-item {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .player-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-wrap {
+      border: 2px solid #000000;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    .php-email-form {
+      border: 2px solid #000000;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    .info-wrap input, .info-wrap textarea, .php-email-form input, .php-email-form textarea {
+      background-color: #f9f9f9;
+    }
+
+    .send-btn {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    .send-btn:hover {
+      background-color: #333333;
+    }
+
+    .info-wrap h3, .info-wrap p, .php-email-form h3, .php-email-form p {
+      color: #333333;
+    }
+
+    .info-wrap i, .php-email-form i {
+      color: #3498db;
+    }
+
+    .info-wrap .social-links a {
+      color: #3498db;
+    }
+
+    .info-wrap .social-links a:hover {
+      color: #2c3e50;
+    }
+
+    .info-wrap .social-links i {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+
+    .info-wrap .social-links a {
+      font-size: 16px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .info-wrap .social-links a:last-child {
+      margin-right: 0;
+    }
+
+    .info-wrap .social-links {
+      margin-top: 20px;
+    }
+
+    .info-wrap .validate {
+      display: none;
+      color: red;
+      margin: 0 0 15px 0;
+      font-weight: 400;
+      font-size: 13px;
+    }
+
+    .info-wrap .error-message {
+      display: none;
+      color: red;
+      margin: 0 0 15px 0;
+      font-weight: 400;
+      font-size: 13px;
+    }
+
+    .info-wrap .sent-message {
+      display: none;
+      color: #28a745;
+      margin: 0 0 15px 0;
+      font-weight: 400;
+      font-size: 13px;
+    }
+
+    .info-wrap .loading {
+      display: none;
+      background: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .info-wrap .loading:before {
+      content: "";
+      display: inline-block;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      margin: 0 10px -6px 0;
+      border: 3px solid #18d26e;
+      border-top-color: #eee;
+      -webkit-animation: animate-loading 1s linear infinite;
+      animation: animate-loading 1s linear infinite;
+    }
+
+    @-webkit-keyframes animate-loading {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes animate-loading {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .info-wrap form {
+      margin-bottom: 0;
+    }
+
+    .info-wrap form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .info-wrap form .form-control {
+      border-radius: 0;
+      box-shadow: none;
+      font-size: 14px;
+    }
+
+    .info-wrap form .form-control:focus {
+      border-color: #3498db;
+    }
+
+    .info-wrap form .form-control::-webkit-input-placeholder {
+      color: #999;
+    }
+
+    .info-wrap form .form-control:-ms-input-placeholder {
+      color: #999;
+    }
+
+    .info-wrap form .form-control::-ms-input-placeholder {
+      color: #999;
+    }
+
+    .info-wrap form .form-control::placeholder {
+      color: #999;
+    }
+
+    .info-wrap form textarea {
+      resize: vertical;
+    }
+
+    .info-wrap form button[type="submit"] {
+      background: #3498db;
+      border: 0;
+      padding: 10px 24px;
+      color: #fff;
+      transition: 0.4s;
+      border-radius: 5px;
+    }
+
+    .info-wrap form button[type="submit"]:hover {
+      background: #2c3e50;
+    }
+
+    .info-wrap form button[type="submit"]:focus {
+      outline: none;
+    }
+
+    .info-wrap form .error-message {
+      display: none;
+      color: red;
+      margin-top: 10px;
+    }
+
+    .info-wrap form .sent-message {
+      display: none;
+      color: green;
+      margin-top: 10px;
+    }
+
+    .info-wrap form .loading {
+      display: none;
+      color: #3498db;
+      margin-top: 10px;
+    }
+
+    .info-wrap form .loading:before {
+      content: "";
+      display: inline-block;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      margin: 0 10px -6px 0;
+      border: 3px solid #18d26e;
+      border-top-color: #eee;
+      -webkit-animation: animate-loading 1s linear infinite;
+      animation: animate-loading 1s linear infinite;
+    }
+
+    @-webkit-keyframes animate-loading {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes animate-loading {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .info-wrap form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .info-wrap form .form-control {
+      border-radius: 0;
+      box-shadow: none;
+      font-size: 14px;
+    }
+
+    .info-wrap form .form-control:focus {
+      border-color: #3498db;
+    }
+
+    .info-wrap form .form-control::-webkit-input-placeholder {
+      color: #999;
+    }
+
+    .info-wrap form .form-control:-ms-input-placeholder {
+      color: #999;
+    }
+
+    .info-wrap form .form-control::-ms-input-placeholder {
+      color: #999;
+    }
+
+    .info-wrap form .form-control::placeholder {
+      color: #999;
+    }
+
+    .info-wrap form textarea {
+      resize: vertical;
+    }
+
+    .info-wrap form button[type="submit"] {
+      background: #3498db;
+      border: 0;
+      padding: 10px 24px;
+      color: #fff;
+      transition: 0.4s;
+      border-radius: 5px;
+    }
+
+    .info-wrap form button[type="submit"]:hover {
+      background: #2c3e50;
+    }
+
+    .info-wrap form button[type="submit"]:focus {
+      outline: none;
+    }
+
+    .info-wrap form .error-message {
+      display: none;
+      color: red;
+      margin-top: 10px;
+    }
+
+    .info-wrap form .sent-message {
+      display: none;
+      color: green;
+      margin-top: 10px;
+    }
+
+    .info-wrap form .loading {
+      display: none;
+      color: #3498db;
+      margin-top: 10px;
+    }
+
+    .info-wrap form .loading:before {
+      content: "";
+      display: inline-block;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      margin: 0 10px -6px 0;
+      border: 3px solid #18d26e;
+      border-top-color: #eee;
+      -webkit-animation: animate-loading 1s linear infinite;
+      animation: animate-loading 1s linear infinite;
+    }
+
+    
+    
+    #categories-container {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+    /* ลบ CSS ที่เกี่ยวข้องกับ modal ออก */
+    #imageModal, .modal-content, .close {
+      display: none;
+    }
+
+    /* เพิ่มสไตล์นี้ในส่วน <style> ที่มีอยู่แล้ว */
+    .category-btn {
+      background-color: transparent;
+      color: #ffffff;
+      border: 2px solid #808080; /* สีเท */
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 5px;
+    }
+
+    .category-btn:hover, .category-btn.active {
+      background-color: transparent;
+      color: #ffffff;
+      border-color: #ffffff; /* เปลี่ยนสีขอบเป็นสีขาวเมื่อ hover หรือ active */
+    }
+
+    .category-section {
+      display: none;
+    }
+
+    .category-section.active {
+      display: block;
+    }
+
+    /* เพิ่มสไตล์นี้ต่อจากสไตล์ที่มีอยู่เดิม */
+    .horizontal-view .row {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 20px; /* เพิ่ม padding ด้านล่างเพื่อให้มีพื้นที่สำหรับ scrollbar */
+    }
+    
+    .horizontal-view .col-md-6 {
+      flex: 0 0 auto;
+      width: 300px; /* กำหนดความกว้างคงที่สำหรับแต่ละคอลัมน์ */
+      max-width: none;
+      margin-right: 20px; /* เพิ่มระยะห่างระหว่างคอลัมน์ */
+    }
+    
+    .horizontal-view .col-md-6:last-child {
+      margin-right: 0; /* ลบ margin ขวาของลัมน์ุท้าย */
+    }
+
+    /* ซ่อน scrollbar แต่ยังคงฟังกัการเลื่อน */
+    .horizontal-view .row::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .horizontal-view .row {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+    .box {
+      width: 100px; /* กำหนดความกว้างของกล่อง */
+      height: 100px; /* กำหนดความสูงของกล่อง */
+      background-color: #3498db; /* กำหนดสีพื้นหลังของกล่อง */
+      margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+    }
+
+    .contact .php-email-form input[type="text"],
+    .contact .php-email-form input[type="email"],
+    .contact .php-email-form textarea {
+      border: 2px solid #3498db; /* กำหนดสีของกรอบ */
+      border-radius: 5px; /* กำหนดความโค้งของมุม */
+      padding: 10px;
+      background-color: transparent; /* พื้นหลังโปร่ใส */
+      color: #ffffff; /* สีของข้อความ */
+      width: 100%; /* ความกว้างเต็ม */
+      margin-bottom: 15px; /* ระยะห่างด้านล่าง */
+    }
+
+    .contact .php-email-form input[type="text"]:focus,
+    .contact .php-email-form input[type="email"]:focus,
+    .contact .php-email-form textarea:focus {
+      border-color: #ffffff; /* เปลี่ยนสีกรอบเมื่อโฟกัส */
+      outline: none; /* ลบเส้นขอบของเบราว์เซอร์ */
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* เพิ่มเงาเมื่อโฟกัส */
+    }
+
+    .contact .php-email-form label {
+      color: #ffffff; /* สีของ label */
+      margin-bottom: 5px; /* ระยะห่างด้านล่างของ label */
+      display: block; /* แสดงเป็นบล็อก */
+    }
+
+    .contact .php-email-form button[type="submit"] {
+      background-color: #3498db; /* สีพื้นหล�����ปุ่ม */
+      color: #ffffff; /* สีของข้อความปุ่ม */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact .php-email-form button[type="submit"]:hover {
+      background-color: #2980b9; /* สีพื้นหลังปุ่มเมื่อโฮเวอร์ */
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center; /* จัดกลาง */
+      align-items: center; /* จัดกลางในแนวตั้ง */
+      gap: 20px; /* ระยะห่างระหว่างไอคอน */
+    }
+
+    .social-icons a {
+      font-size: 2rem; /* ขยายขนาดไอคอน */
+      color: #ffffff; /* เปลี่ยนสีไอคอน */
+      transition: transform 0.3s; /* เพิ่มการเปลี่ยนแปลงเมื่อ hover */
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2); /* ขยายขนาดเมื่อ hover */
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/profile/profile - Copy.JPG" alt="Profile picture of Wutthichai" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Wutthichai</h1>
+    </a>
+
+    <div class="social-icons">
+      <a href="https://twitter.com/yourprofile" target="_blank">
+        <i class="bi bi-twitter"></i> <!-- ไอคอน Twitter -->
+      </a>
+      <a href="https://web.facebook.com/profile.php?id=100013837177449" target="_blank">
+        <i class="bi bi-facebook"></i> <!-- ไอคอน Facebook -->
+      </a>
+      <a href="https://www.instagram.com/p.wtc_muagml/ " target="_blank">
+        <i class="bi bi-instagram"></i> <!-- ไอคอน Instagram -->
+      </a>
+      <a href="https://skype.com/yourprofile" target="_blank">
+        <i class="bi bi-skype"></i> <!-- ไอคอน Skype -->
+      </a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">
+        <i class="bi bi-linkedin"></i> <!-- ไอคอน LinkedIn -->
+      </a>
+    </div>
+
+    <nav id="navmenu" class="navmenu" aria-label="Main navigation">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+5
+      <img src="assets/img/profile/DSC01715.JPG" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Wutthichai Pamuangmoon</h2>
+        <p>I'm <span class="typed" data-typed-items="3D artist "></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>As a dedicated 3D artist studying at Chiang Mai University, I specialize in creating high-quality 3D models and animations for interactive media. With hands-on experience in tools like Blender, I have contributed to various team projects, including game design and environmental modeling. My goal is to push the boundaries of 3D artistry by blending technical skills with creative vision, aiming to contribute to the gaming and animation industries.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/profile/profile - Copy.JPG" alt="Profile picture of Wutthichai" class="img-fluid rounded-circle">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>3D Modeling &amp; 3D Animation</h2>
+            <p class="fst-italic py-3">
+              I am a skilled 3D artist with experience in modeling, texturing, and animation. Proficient in tools like Blender and Substance 3D painter.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>6 Dec 2003</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>0988107352</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Lampang, Thailand</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>20</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>niversity</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>wutthichai0252p@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+              As a passionate 3D artist, I am constantly exploring new techniques and technologies to enhance my skills and create captivating visual experiences. My goal is to contribute innovative and high-quality 3D content to the gaming and animation industries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section><!-- /About Section -->
+
+   
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section" style="background-color: #000000; color: #ffffff; padding: 80px 0;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <div style="position: relative; display: inline-block; padding: 20px;">
+              <h2 style="font-size: 12rem; font-weight: bold; color: #ffffff; line-height: 1; margin-bottom: 0;">3<span style="color: #ff6b00; font-size: 3rem; position: absolute; bottom: 0; right: -20px;">.</span></h2>
+              <p style="font-size: 1.5rem; color: #ffffff; margin-top: 0; white-space: nowrap;">
+                Years<br>
+                Experience<br>
+                Working
+              </p>
+              <div style="position: absolute; top: 0; left: 0; right: 20px; bottom: 0; border: 2px solid #333333; border-right: none;"></div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <h2 style="font-size: 3.5rem; margin-bottom: 1rem; color: #ffffff;">Great Experience</h2>
+            <p style="margin-bottom: 2rem; color: #ffffff; font-size: 1.2rem;">Since 2021 to the present day, I am closely involved in 3D modeling and animation for games and interactive media.</p>
+            
+            <div class="skill-item mb-4">
+              <div class="d-flex justify-content-between mb-1">
+                <span style="font-size: 1.2rem; color: #000000;">BLENDER</span>
+                <span style="font-size: 1.2rem; color: #000000;">85%</span>
+              </div>
+              <div class="progress" style="height: 10px; background-color: #000000; border-radius: 10px; overflow: hidden;">
+                <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #ff6b00; border-radius: 10px;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skill-item mb-4">
+              <div class="d-flex justify-content-between mb-1">
+                <span style="font-size: 1.2rem; color: #000000;">CLIP STUDIO PAINT</span>
+                <span style="font-size: 1.2rem; color: #000000;">70%</span>
+              </div>
+              <div class="progress" style="height: 10px; background-color: #000000; border-radius: 10px; overflow: hidden;">
+                <div class="progress-bar" role="progressbar" style="width: 70%; background-color: #ff6b00; border-radius: 10px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skill-item mb-4">
+              <div class="d-flex justify-content-between mb-1">
+                <span style="font-size: 1.2rem; color: #000000;">SUBSTANCE 3D PAINTER</span>
+                <span style="font-size: 1.2rem; color: #000000;">65%</span>
+              </div>
+              <div class="progress" style="height: 10px; background-color: #000000; border-radius: 10px; overflow: hidden;">
+                <div class="progress-bar" role="progressbar" style="width: 65%; background-color: #ff6b00; border-radius: 10px;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>            I am a third-year student majoring in Digital Game at Chiang Mai University, with strong skills in both 3D and 2D art. My expertise includes creating high-quality 3D models, environments, and animations using tools like Blender, Maya, and ZBrush, as well as producing detailed 2D designs and illustrations with Adobe Creative Suite and other digital painting software.
+          I am passionate about bringing creative ideas to life through digital art, and I thrive in collaborative environments where I can contribute to game development projects. I am seeking an internship to further develop my skills and gain practical game industry experience.
+          
+          
+          </p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Wutthichai Pamuangmoon</h4>
+              <p><em>Innovative and deadline-driven 3D Artist with experience in creating high-quality 3D models and animations for interactive media and game development.</em></p>
+              <ul>
+                <li>Lampang, Thailand</li>
+                <li>0988107352</li>
+                <li>wutthichai0252p@gmail.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Sormngam Witthayakhom School</h4>
+              <h5>2015 - 2021</h5>
+              <p><em>Sormngam Witthayakhom School, Lampang Province, Thailand</em></p>
+              <ul>
+                <li>Lower Secondary Education (Grade 7-9) Regular Program</li>
+                <li>Upper Secondary Education (Grade 10-12) Science-Mathematics Program</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>College of Arts, Media and Technology</h4>
+              <h5>2021 - Present</h5>
+              <p><em>Chiang Mai, Thailand</em></p>
+              <ul>
+                <li>College of Arts, Media and Technology : Digital Game</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title"> Experience</h3>
+            <div class="resume-item">
+              <h4>Project</h4>  
+              <p><em>Chiang Mai University, Chiang Mai, Thailand</em></p>
+              <h5>2022 : Second-year student, first semester</h5>
+                <ul>
+                <li>Game : LastDayInKhumuang</li>
+                <li>Genre : Action, Survival</li>
+                <li>Role : 2D Artist Pixel Art,VFX,UI</li>
+                <li>Tool : Photoshop</li>
+                <li>Engine : MONOGAME</li>
+              </ul>
+              <h5>2023 : Second-year student, second semester</h5>
+                <ul>
+                <li>Game : Blacket Night</li>
+                <li>Genre : Mobile Game, Action, Survival, Roguelike</li>
+                <li>Role : 2D Artist ,VFX,UI</li>
+                <li>Tool : Clip Studio Paint, Photoshop</li>
+                <li>Engine : UNITY 2D</li>
+              </ul>
+              <h5>2024 : Third-year student, first semester</h5>
+                <ul>
+                <li>Game : Jumanjek</li>
+                <li>Genre : Action, Survival,Puzzle,Endless</li>
+                <li>Role : 3D Character Modeler,UI</li>
+                <li>Tool : Blender,Substance Painter,Clip Studio Paint</li>
+                <li>Engine : UNITY 3D</li>
+              </ul>
+              
+        </div>
+      </div>
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section" style="background-color: #000000; color: #ffffff; padding: 80px 0;">
+      <div class="container-fluid">
+        <!-- Section Title -->
+        <div class="section-title" data-aos="fade-up">
+          <h2 style="color: #ffffff;">Portfolio</h2>
+          <p style="color: #ffffff;">I specialize in developing 3D models for games with software like Blender. I am capable of producing both high-detail and low-poly models that meet quality standards for gaming, as well as using Substance Painter to achieve realistic textures. Here are my creations.</p>
+        </div>
+
+        <!-- LastDayInKhumuang Section -->
+        <div class="row justify-content-center text-center" data-aos="fade-up">
+          <div class="col-12">
+            <h3 style="color: #ffffff; font-size: 4ch; margin-bottom: 30px;">
+              <span class="typed-text" data-typed-items="LastDayInKhumuang"></span>
+            </h3>
+            <p style="color: #ffffff; max-width: 800px; margin: 0 auto 40px;">LastDayInKhumuang is an action survival game that I developed as a second-year student in the first semester. I was responsible for creating 2D pixel art graphics, visual effects, and user interface. This game showcases my design skills in a retro style and understanding of creating game atmosphere.</p>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12">
+          <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease;">
+            <img src="assets/img/2year/Lastday_poster-game.png" class="img-fluid player-image" alt="Effect Warp" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; margin-bottom: 15px; cursor: pointer;">
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12"></div>
+          <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease;">
+            <video class="img-fluid player-video" controls style="width: 100%; height: auto; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+              <source src="assets/img/Video/LastdayinKhumuang_Teaser.mp4" type="video/mp4">
+            
+            </video>
+          </div>
+        </div>
+
+        <!-- Portfolio Categories for LastDayInKhumuang -->
+        <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+          <div class="col-12">
+            <div class="portfolio-categories" style="display: flex; justify-content: center; flex-wrap: wrap;">
+              <button class="btn btn-outline-light m-2 category-btn active" data-category="player" data-section="lastday">Player</button>
+              <button class="btn btn-outline-light m-2 category-btn" data-category="enemy" data-section="lastday">Enemy</button>
+              <button class="btn btn-outline-light m-2 category-btn" data-category="boss" data-section="lastday">Boss</button>
+              <button class="btn btn-outline-light m-2 category-btn" data-category="ui" data-section="lastday">UI</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Content for LastDayInKhumuang -->
+        <div id="category-content-lastday">
+          <!-- Player Section -->
+          <div class="category-section active" id="player-section-lastday">
+            <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+              <div class="col-12">
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 30px;">Player</h3>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Player/player-Attack.gif" class="img-fluid player-image" alt="Effect Warp" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Attack</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Player/effect-attack.gif" class="img-fluid player-image" alt="Effect Attack" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Effect Attack</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Player/Effect_Warp.png" class="img-fluid player-image" alt="Effect Warp" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Effect Warp</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Player/Effect-_attack.png" class="img-fluid player-image" alt="Effect Attack" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Effect Attack</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Player/player_all_set_.png" class="img-fluid player-image" alt="Player All Set" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Player All Set</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Player/set-Skill-E.png" class="img-fluid player-image" alt="Set Skill E" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Set Skill Attack</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Player/skill_player_Attack.png" class="img-fluid player-image" alt="Skill Player Attack" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Set Player Attack</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enemy Section -->
+          <div class="category-section" id="enemy-section-lastday">
+            <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+              <div class="col-12">
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 30px;">Enemy</h3>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Enemy/enemy-aimation.gif" class="img-fluid enemy-image" alt="Enemy Idle" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Monster Mage</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Enemy/Monster_Mage_Sprite.png" class="img-fluid enemy-image" alt="Enemy Idle" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Monster Mage SpriteSheet</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Enemy/Monster_Sword_all.gif" class="img-fluid enemy-image" alt="Enemy Run" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Monster Sword</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Enemy/Monster_Sword_all.png" class="img-fluid enemy-image" alt="Enemy Run" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Monster Sword SpriteSheet</h5>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+
+          <!-- Boss Section -->
+          <div class="category-section" id="boss-section-lastday">
+            <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+              <div class="col-12">
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 30px;">Boss</h3>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="boss-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Boss/output-onlinegiftools.gif" class="img-fluid boss-image" alt="Dullaha" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Boss</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="boss-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Boss/Boss-Attack-TunderBold-Access.png" class="img-fluid boss-image" alt="Dullaha" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Boss</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="boss-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Boss/Dullaha/Dullahahitn_All_Set.png" class="img-fluid boss-image" alt="Dullaha" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Dullaha</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="boss-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Boss/Phoegeon/Phoenix_Animation_flyIdleAttackDie.png" class="img-fluid boss-image" alt="Phoenix" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Phoenix</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="boss-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Boss/Phoegeon/FireBall_Phoenix.png" class="img-fluid boss-image" alt="Phoenix Fireball" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Phoenix Fireball</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="boss-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Boss/Phoegeon/Skill_Phoenix_Attack.png" class="img-fluid boss-image" alt="Phoenix Attack" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Phoenix Attack</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Boss/boss-effect.gif" class="img-fluid enemy-image" alt="Boss Effect" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Boss Effect</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Boss/Animation-ThunderBolt_boss_.png" class="img-fluid enemy-image" alt="ThunderBolt Boss" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">ThunderBolt Boss</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Boss/ThundeTrap_Boss.png" class="img-fluid enemy-image" alt="ThunderBolt Boss" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">ThunderBolt Boss</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/Boss/BossTuderbolt.png" class="img-fluid enemy-image" alt="Boss Thunderbolt" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Boss Thunderbolt</h5>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          
+
+        </div>
+         <!-- UI Section -->
+         <div class="category-section" id="ui-section-lastday">
+          <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+            <div class="col-12">
+              <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 30px;">UI</h3>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="ui-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                    <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                      <img src="assets/img/Player/UI-characrtet_&Boss.png" class="img-fluid ui-image" alt="UI Character & HPbar" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                    </div>
+                    <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">UI Character & HPbar</h5>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="ui-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                    <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                      <img src="assets/img/Player/button&-cursor.png" class="img-fluid ui-image" alt="Button & Cursor" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                    </div>
+                    <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Button & Cursor</h5>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="ui-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                    <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                      <img src="assets/img/Player/Skill_E_Icon_Black.png" class="img-fluid ui-image" alt="Skill SwordIcon" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                    </div>
+                    <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Skill SwordIcon</h5>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="ui-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                    <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                      <img src="assets/img/Player/Dash_Icon_Black.png" class="img-fluid ui-image" alt="Skill DashIcon" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                    </div>
+                    <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Skill DashIcon</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BlacketNight Section -->
+        <div class="row justify-content-center text-center" data-aos="fade-up" style="background-color: #000000; padding: 40px 0; margin: 0;">
+          <div class="col-12">
+            <h3 style="color: #ffffff; font-size: 5ch; margin-bottom: 50px;">
+              <span class="typed-text" data-typed-items="BlacketNight"></span>
+            </h3>
+            <p style="color: #ffffff; max-width: 800px; margin: 0 auto 40px;">BlacketNight is a mobile action survival roguelike game that I developed as a second-year student in the second semester. I was responsible for creating 2D graphics, visual effects, and user interface. This project showcases my ability to design more complex assets and adapt art styles to suit the mobile platform.</p>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12" style="background-color: #000000; padding-bottom: 40px;">
+          <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease;">
+            <video class="img-fluid player-video" controls style="width: 100%; height: auto; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+              <source src="assets/img/Video/project chanom Tailer.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- Portfolio Categories for BlacketNight -->
+        <div class="row justify-content-center text-center mt-5" data-aos="fade-up" style="background-color: #000000; padding: 20px 0;">
+          <div class="col-12">
+            <div class="portfolio-categories" style="display: flex; justify-content: center; flex-wrap: wrap;">
+              <button class="btn btn-outline-light m-2 category-btn active" data-category="player" data-section="blacket">Player</button>
+              <button class="btn btn-outline-light m-2 category-btn" data-category="Weapon" data-section="blacket">Weapon</button>
+              <button class="btn btn-outline-light m-2 category-btn" data-category="Skill" data-section="blacket">Skill</button>
+              <button class="btn btn-outline-light m-2 category-btn" data-category="UI" data-section="blacket">UI</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Content for BlacketNight -->
+        <div id="category-content-blacket" style="background-color: #000000; padding-bottom: 40px;">
+          <!-- Player Section -->
+          <div class="category-section active" id="player-section-blacket">
+            <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+              <div class="col-12">
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 30px;">Player</h3>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/Char01.gif" class="img-fluid player-image" alt="PLayer Walk" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">PLayer Walk</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/Char02.gif" class="img-fluid player-image" alt="Player Walk" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Player Walk</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/Char_Walk_Back_Sheet.png" class="img-fluid player-image" alt="Player Walk back" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Player Walk back</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/wall_side.png" class="img-fluid player-image" alt="Player Walk Side" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Player Walk Side</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weapon Section -->
+          <div class="category-section" id="Weapon-section-blacket">
+            <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+              <div class="col-12">
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 30px;">Weapon</h3>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/dualbald_attack.png" class="img-fluid enemy-image" alt="Dual Blade Attack" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Dual Blade Attack</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/Dual-attack.gif" class="img-fluid enemy-image" alt="Dual Attack Animation" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Dual Attack Animation</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/sperer-animation.gif" class="img-fluid enemy-image" alt="Wand" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Spere Attack Animation</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/Spear_Attack_1.png" class="img-fluid enemy-image" alt="Wand" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Spere</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/Sord-effect.gif" class="img-fluid enemy-image" alt="Sword Draft" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Sword Attack Animation</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/sword-draft.png" class="img-fluid enemy-image" alt="Sword Draft" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Sword </h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="enemy-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/Wand.png" class="img-fluid enemy-image" alt="Wand" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Wand</h5>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Section -->
+          <div class="category-section" id="Skill-section-blacket">
+            <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+              <div class="col-12">
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 30px;">Skill</h3>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="boss-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/Dual_skill.gif" class="img-fluid boss-image" alt="DualBlade Skill" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">DualBlade Skill</h5>
+                    </div>  
+                  </div>
+                  <div class="col-md-6">
+                    <div class="boss-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/Sord-effect.gif" class="img-fluid boss-image" alt="Sword Skill" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Sword Skill</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="boss-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/sprer_skill.gif" class="img-fluid boss-image" alt="Spear Skill" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Spear Skill</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="boss-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/ward-effect.gif" class="img-fluid boss-image" alt="Wand Skill" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Wand Skill</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UI Section -->
+          <div class="category-section" id="UI-section-blacket">
+            <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+              <div class="col-12">
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 30px;">UI</h3>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="ui-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/UI-Clock.gif" class="img-fluid ui-image" alt="UI Clock Moon" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">UI Clock Moon</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="ui-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/UI_papersell.png" class="img-fluid ui-image" alt="UI Paper Sell" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">UI Paper Sell</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="ui-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/Ui_shop_framse-all.png" class="img-fluid ui-image" alt="UI Shop Frames" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">UI Shop Frames</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="ui-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; height: 100%;">
+                      <div style="height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="assets/img/term2/GEM.gif" class="img-fluid ui-image" alt="Gem" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; cursor: pointer;">
+                      </div>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Gem</h5>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- JUMANJEK Section -->
+        <div class="row justify-content-center text-center" data-aos="fade-up">
+          <div class="col-12">
+            <h3 style="color: #ffffff; font-size: 5ch; margin-bottom: 50px;">
+              <span class="typed-text" data-typed-items="JUMANJEK"></span>
+            </h3>
+            <p style="color: #ffffff; max-width: 800px; margin: 0 auto 40px;">JUMANJEK is an action survival, puzzle, and endless game that I developed as a third-year student in the first semester. I ventured into creating 3D models for characters and continued to handle the UI. This project showcases my ability to create 3D content and seamlessly integrate 2D and 3D elements.</p>
+          </div>
+        </div>
+
+        <!-- Portfolio Categories for JUMANJEK -->
+        <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+          <div class="col-12">
+            <div class="portfolio-categories" style="display: flex; justify-content: center; flex-wrap: wrap;">
+              <button class="btn btn-outline-light m-2 category-btn active" data-category="player" data-section="jumanjek">Player</button>
+              <button class="btn btn-outline-light m-2 category-btn" data-category="enemy" data-section="jumanjek">Enemy</button>
+              <button class="btn btn-outline-light m-2 category-btn" data-category="Item" data-section="jumanjek">Item</button>
+             
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Content for JUMANJEK -->
+        <div id="category-content-jumanjek">
+          <!-- Player Section -->
+          <div class="category-section active" id="player-section-jumanjek">
+            <div class="row justify-content-center text-center mt-5" data-aos="fade-up" style="background-color: #000000; padding: 20px; border-radius: 10px;">
+              <div class="col-12">
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 30px;">Player</h3>
+                <div class="row g-4 justify-content-center">
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; margin-bottom: 20px;">
+                      <video class="img-fluid player-video" controls style="width: 100%; height: auto; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <source src="assets/img/Video/year3/character0001-0060.mp4" type="video/mp4">
+                      </video>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Character </h5>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enemy Section -->
+          <div class="category-section" id="enemy-section-jumanjek">
+            <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+              <div class="col-12">
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 30px;">Enemy</h3>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; margin-bottom: 20px;">
+                      <video class="img-fluid player-video" controls style="width: 100%; height: auto; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <source src="assets/img/Video/year3/Range0001-0060.mp4" type="video/mp4">
+                      </video>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Range Attack</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; margin-bottom: 20px;">
+                      <video class="img-fluid player-video" controls style="width: 100%; height: auto; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <source src="assets/img/Video/year3/Melee0001-0060.mp4" type="video/mp4">
+                      </video>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Melee Attack</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item Section -->
+          <div class="category-section" id="Item-section-jumanjek">
+            <div class="row justify-content-center text-center mt-5" data-aos="fade-up">
+              <div class="col-12">
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 30px;">Item</h3>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; margin-bottom: 20px;">
+                      <video class="img-fluid player-video" controls style="width: 100%; height: auto; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <source src="assets/img/Video/Item/Cape.mp4" type="video/mp4">
+                      </video>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Cape</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; margin-bottom: 20px;">
+                      <video class="img-fluid player-video" controls style="width: 100%; height: auto; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <source src="assets/img/Video/Item/Boot.mp4" type="video/mp4">
+                      </video>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Boot</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; margin-bottom: 20px;">
+                      <video class="img-fluid player-video" controls style="width: 100%; height: auto; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <source src="assets/img/Video/Item/Landmine.mp4" type="video/mp4">
+                      </video>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Landmine</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="player-item" style="background-color: #1a1a1a; border-radius: 10px; padding: 20px; transition: all 0.3s ease; margin-bottom: 20px;">
+                      <video class="img-fluid player-video" controls style="width: 100%; height: auto; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <source src="assets/img/Video/Item/Shild.mp4" type="video/mp4">
+                      </video>
+                      <h5 style="color: #ffffff; font-size: 1.2rem; margin-top: 15px;">Shield</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+        <!-- เพิ่ม script ต่อไปนี้ที่ด้านล่างของไฟ์ หรือ���นส่วนของ script ที่มีอยู่แล้ว -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const categoryButtons = document.querySelectorAll('.category-btn');
+          const categorySections = document.querySelectorAll('.category-section');
+          const toggleViewButtons = document.querySelectorAll('.toggle-view-btn');
+
+          categoryButtons.forEach(button => {
+            button.addEventListener('click', function() {
+              const category = this.getAttribute('data-category');
+              const section = this.getAttribute('data-section');
+              
+              const sectionButtons = document.querySelectorAll(`.category-btn[data-section="${section}"]`);
+              const sectionContent = document.querySelectorAll(`#category-content-${section} .category-section`);
+              
+              sectionButtons.forEach(btn => btn.classList.remove('active'));
+              sectionContent.forEach(content => content.classList.remove('active'));
+              
+              this.classList.add('active');
+              document.getElementById(`${category}-section-${section}`).classList.add('active');
+            });
+          });
+
+          toggleViewButtons.forEach(button => {
+            button.addEventListener('click', function() {
+              const parentSection = this.closest('.category-section');
+              parentSection.querySelector('.row.g-4').classList.toggle('horizontal-view');
+              this.textContent = this.textContent === 'Horizontal View' ? 'Vertical View' : 'Horizontal View';
+            });
+          });
+        });
+        </script>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    
+
+   
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section dark-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: #ffffff;">Contact</h2>
+        <p style="color: #ffffff;">If you have any questions or suggestions, please contact me.</p>
+        
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0" style="color: #ffffff; display: flex; align-items: center;"></i>
+                <div style="margin-left: 10px;">
+                  <h3 style="color: #ffffff; margin-bottom: 0;">Address</h3>
+                  <p style="color: #ffffff; margin-bottom: 0;">100 DongNongJok,SeomSai,SeomNgam,Lampang,Thailand 52210</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0" style="color: #ffffff; display: flex; align-items: center;"></i>
+                <div style="margin-left: 10px; display: flex; flex-direction: column; justify-content: center;">
+                  <h3 style="color: #ffffff; margin-bottom: 0;"> Call Us</h3>
+                  <p style="color: #ffffff; margin-bottom: 0;">0988107352</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0" style="color: #ffffff; display: flex; align-items: center;"></i>
+                <div style="margin-left: 10px; display: flex; flex-direction: column; justify-content: center;">
+                  <h3 style="color: #ffffff; margin-bottom: 0;"> Email Us</h3>
+                  <p style="color: #ffffff; margin-bottom: 0;">wutthichai0252@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d435.3724621833405!2d99.14404939272715!3d18.019250299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d955dba6d81aa3%3A0x90f31b97b3d5d491!2z4Liq4Liz4LiZ4Lix4LiB4Liq4LiH4LiOIOC4lOC4h-C4q-C4meC4reC4h-C4iOC4reC4gQ!5e0!3m2!1sth!2sth!4v1710166518595!5m2!1sth!2sth" width="100%" height="270" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+          </div>
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2" style="color: #ffffff;">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" placeholder="Please enter your name" required="" style="background-color: #2c2f3f; color: #ffffff; border: none; border-radius: 0;">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2" style="color: #ffffff;">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" placeholder="Please enter your email" required="" style="background-color: #2c2f3f; color: #ffffff; border: none; border-radius: 0;">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2" style="color: #ffffff;">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" placeholder="Please enter the subject" required="" style="background-color: #2c2f3f; color: #ffffff; border: none; border-radius: 0;">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2" style="color: #ffffff;">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" placeholder="Please enter your message" required="" style="background-color: #2c2f3f; color: #ffffff; border: none; border-radius: 0;"></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit" style="background-color: #149ddd; color: #ffffff; border: none; padding: 10px 20px; border-radius: 0;">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var typedElements = document.querySelectorAll('.typed-text');
+      typedElements.forEach(function(element) {
+        var typed = new Typed(element, {
+          strings: element.getAttribute('data-typed-items').split(','),
+          typeSpeed: 100,
+          backSpeed: 50,
+          backDelay: 2000,
+          loop: true
+        });
+      });
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('.portfolio-categories a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      const categorySections = document.querySelectorAll('.category-section');
+      const toggleViewButtons = document.querySelectorAll('.toggle-view-btn');
+
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const category = this.getAttribute('data-category');
+          const section = this.getAttribute('data-section');
+          
+          const sectionButtons = document.querySelectorAll(`.category-btn[data-section="${section}"]`);
+          const sectionContent = document.querySelectorAll(`#category-content-${section} .category-section`);
+          
+          sectionButtons.forEach(btn => btn.classList.remove('active'));
+          sectionContent.forEach(content => content.classList.remove('active'));
+          
+          this.classList.add('active');
+          document.getElementById(`${category}-section-${section}`).classList.add('active');
+        });
+      });
+
+      toggleViewButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const parentSection = this.closest('.category-section');
+          parentSection.querySelector('.row.g-4').classList.toggle('horizontal-view');
+          this.textContent = this.textContent === 'Horizontal View' ? 'Vertical View' : 'Horizontal View';
+        });
+      });
+    });
+  </script>
+
+  <div id="fullscreenOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(250, 250, 250, 0.9); z-index: 9999;">
+    <img id="fullscreenImage" src="" style="max-width: 100%; max-height: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.player-image, .enemy-image, .boss-image, .ui-image');
+    const overlay = document.getElementById('fullscreenOverlay');
+    const fullscreenImage = document.getElementById('fullscreenImage');
+
+    images.forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function() {
+        fullscreenImage.src = this.src;
+        overlay.style.display = 'block';
+      });
+    });
+
+    overlay.addEventListener('click', function() {
+      this.style.display = 'none';
+    });
+  });
+  </script>
+
+</body>
+
+</html>
